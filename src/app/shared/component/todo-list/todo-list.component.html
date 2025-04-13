@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let todo of todoData">
+        <h5 class="my-auto">
+            <strong>{{todo.todoItem | uppercase}}</strong>
+        </h5>
+        <div class="form-group my-auto">
+            <button (click)="onEdit(todo)" class="btn btn-primary mr-3">Edit</button>
+            <button (click)="onRemove(todo)" class="btn btn-danger">Remove</button>
+        </div>
+    </li>
+</ul>

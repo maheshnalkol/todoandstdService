@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-hovered table-bordered">
+        <thead>
+            <tr>
+                <th>Sr no</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let std of stdData; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{std.fname}}</td>
+                <td>{{std.lname}}</td>
+                <td>{{std.email}}</td>
+                <td>{{std.contact}}</td>
+                <td><button (click)="onEdit(std)" class="btn btn-sm btn-primary">Edit</button></td>
+                <td><button (click)="onRemove(std)" class="btn btn-sm btn-danger">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
