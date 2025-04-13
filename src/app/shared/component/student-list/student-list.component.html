@@ -1,4 +1,4 @@
-<div class="table-responsive" >
+<div class="table-responsive" *ngIf="stdData.length>0; else show">
     <table class="table table-hovered table-bordered">
         <thead>
             <tr>
@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody  >
-            <tr  *ngFor="let std of stdData; let i=index">
+            <tr *ngFor="let std of stdData; let i=index">
                 <td>{{i+1}}</td>
                 <td>{{std.fname}}</td>
                 <td>{{std.lname}}</td>
@@ -21,9 +21,11 @@
                 <td><button (click)="onEdit(std)" class="btn btn-sm btn-primary">Edit</button></td>
                 <td><button (click)="onRemove(std)" class="btn btn-sm btn-danger">Remove</button></td>
             </tr>
+            
         </tbody>
     </table>
-    <ng-template show>
-        <p>Student data is not added yet...!!!</p>
-    </ng-template>
+
 </div>
+<ng-template #show>
+    <p>Student data is not added yet...!!!</p>
+</ng-template>
