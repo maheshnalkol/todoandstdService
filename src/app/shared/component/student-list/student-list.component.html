@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div class="table-responsive" >
     <table class="table table-hovered table-bordered">
         <thead>
             <tr>
@@ -11,8 +11,8 @@
                 <th>Remove</th>
             </tr>
         </thead>
-        <tbody >
-            <tr *ngFor="let std of stdData; let i=index">
+        <tbody  >
+            <tr  *ngFor="let std of stdData; let i=index">
                 <td>{{i+1}}</td>
                 <td>{{std.fname}}</td>
                 <td>{{std.lname}}</td>
@@ -23,4 +23,7 @@
             </tr>
         </tbody>
     </table>
+    <ng-template show>
+        <p>Student data is not added yet...!!!</p>
+    </ng-template>
 </div>

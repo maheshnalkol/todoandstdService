@@ -28,6 +28,7 @@ export class StudentService {
 
   createStdObj(std:Istudent){
     this.studentArr.push(std)
+    
   }
 
 
